@@ -23,11 +23,24 @@ It implements the same Ping-Pong algorithm in **main.c**.
 Code flashed only inside the sender board (battery operated). It sends only one *PING* message and then puts the LoRa radio to sleep.
 
 ## MATLAB 
-
-### SF_B_elab.m
-
-### Ping_elab.m
+This code was used to elaborate the measurements
 
 ### R_measures.m
 
+Code used to compute the power and the energy produced by the two different buttons when connected to a resistivve load.
+
+### SF_B_elab.m
+
+Code used to compute and plot the energy consumed during a ping pong from the board at different values of spreading factor and bandwidth.
+
+### Ping_elab.m
+
+Code used to filter and elaborate the current measurements when the board send a single ping. This code also compute the energy consumption of the board and compare the single components (LoRa, MCU) consumes against the total ones.
+
+### calcoli_capacita.m
+
+Code used to compute the required capacity for our circuit given its energy consumption. This code also produce a rough estimate of the number of button presses required to charge the capacitor.
+
 ### Final_measures.m
+
+Code used to elaborate the measurements done on the final prototype. Each section of this file is used to elaborate a different measurements , in some we simply filtered the signal and compared it with previous measurements and in others we conted the number of pressures required to charge the capacitor.
