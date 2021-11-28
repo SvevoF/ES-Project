@@ -27,20 +27,20 @@ This code was used to elaborate the measurements
 
 ### R_measures.m
 
-Code used to compute the power and the energy produced by the two different buttons when connected to a resistivve load.
+Code used to compute the power and the energy transfered by the two different buttons when connected to a resistive load.
 
 ### SF_B_elab.m
 
-Code used to compute and plot the energy consumed during a ping pong from the board at different values of spreading factor and bandwidth.
+Code used to compute and plot the energy consumed during a ping-pong from the board at different values of Spreading Factor and Bandwidth.
 
 ### Ping_elab.m
 
-Code used to filter and elaborate the current measurements when the board send a single ping. This code also compute the energy consumption of the board and compare the single components (LoRa, MCU) consumes against the total ones.
+Code used to filter and elaborate the current measurements when the board sends a single ping. This code also computes the energy consumption of the board and compare the standalone components (LoRa, MCU) consumption against the total one.
 
 ### calcoli_capacita.m
 
-Code used to compute the required capacity for our circuit given its energy consumption. This code also produce a rough estimate of the number of button presses required to charge the capacitor.
+Used to compute the required capacitance for our circuit given its energy consumption. It also produces a rough estimate of the number of button presses required to charge the capacitor.
 
 ### Final_measures.m
 
-Code used to elaborate the measurements done on the final prototype. Each section of this file is used to elaborate a different measurements , in some we simply filtered the signal and compared it with previous measurements and in others we conted the number of pressures required to charge the capacitor.
+Code used to elaborate the measurements done on the final prototype. Each section of the file is used to elaborate a different measurement: in some we simply filtered the signal and compared it with previous measurements; in others we counted the number of pressures required to charge the specific capacitor.
