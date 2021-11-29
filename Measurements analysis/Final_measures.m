@@ -28,6 +28,9 @@ i1=T1(:,2);% [mA]
 Ts = T(2,1) - T(1,1);
 Fs = 1/Ts;
 T=T(~isnan(T(:,2)),:);% eliminating NaN values(problem with filtering)
+% multiple measures and each measure start from zero,
+% when we concatenate the we have to recreate the time scale:
+T(:,1)=(0:1:length(T(:,1))-1)*Ts;
 % extraction of variables
 t=T(:,1);%[s]
 i=-T(:,2).*1000;%[mA]
@@ -122,6 +125,9 @@ i1=T1(:,2);% [mA]
 Ts = T(2,1) - T(1,1);
 Fs = 1/Ts;
 T=T(~isnan(T(:,2)),:);% eliminating NaN values(problem with filtering)
+% multiple measures and each measure start from zero,
+% when we concatenate the we have to recreate the time scale:
+T(:,1)=(0:1:length(T(:,1))-1)*Ts;
 % extraction of variables
 t=T(:,1);%[s]
 i=-T(:,2).*1000;%[mA]
@@ -215,6 +221,9 @@ i1=T1(:,2);% [mA]
 Ts = T(2,1) - T(1,1);
 Fs = 1/Ts;
 T=T(~isnan(T(:,2)),:);% eliminating NaN values(problem with filtering)
+% multiple measures and each measure start from zero,
+% when we concatenate the we have to recreate the time scale:
+T(:,1)=(0:1:length(T(:,1))-1)*Ts;
 % extraction of variables
 t=T(:,1);%[s]
 i=-T(:,2).*1000;%[mA]
@@ -311,6 +320,9 @@ i1=T1(:,2);% [mA]
 Ts = T(2,1) - T(1,1);
 Fs = 1/Ts;
 T=T(~isnan(T(:,2)),:);% eliminating NaN values(problem with filtering)
+% multiple measures and each measure start from zero,
+% when we concatenate the we have to recreate the time scale:
+T(:,1)=(0:1:length(T(:,1))-1)*Ts;
 % extraction of variables
 t=T(:,1);%[s]
 i=-T(:,2).*1000;%[mA]
@@ -404,6 +416,9 @@ i1=T1(:,2);% [mA]
 Ts = T(2,1) - T(1,1);
 Fs = 1/Ts;
 T=T(~isnan(T(:,2)),:);% eliminating NaN values(problem with filtering)
+% multiple measures and each measure start from zero,
+% when we concatenate the we have to recreate the time scale:
+T(:,1)=(0:1:length(T(:,1))-1)*Ts;
 % extraction of variables
 t=T(:,1);%[s]
 i=-T(:,2).*1000;%[mA]
@@ -497,6 +512,9 @@ i1=T1(:,2);% [mA]
 Ts = T(2,1) - T(1,1);
 Fs = 1/Ts;
 T=T(~isnan(T(:,2)),:);% eliminating NaN values(problem with filtering)
+% multiple measures and each measure start from zero,
+% when we concatenate the we have to recreate the time scale:
+T(:,1)=(0:1:length(T(:,1))-1)*Ts;
 % extraction of variables
 t=T(:,1);%[s]
 i=-T(:,2).*1000;%[mA]
@@ -590,6 +608,9 @@ i1=T1(:,2);% [mA]
 Ts = T(2,1) - T(1,1);
 Fs = 1/Ts;
 T=T(~isnan(T(:,2)),:);% eliminating NaN values(problem with filtering)
+% multiple measures and each measure start from zero,
+% when we concatenate the we have to recreate the time scale:
+T(:,1)=(0:1:length(T(:,1))-1)*Ts;
 % extraction of variables
 t=T(:,1);%[s]
 i=-T(:,2).*1000;%[mA]
@@ -621,7 +642,7 @@ FigID=FigID+1;
 figure(FigID)
     hold on    
     plot(t,i,'LineWidth',1)
-    xlabel('time')
+    xlabel('time [s]')
     ylabel('current  [mA]')
 FigID=FigID+1;
 figure(FigID)
@@ -629,7 +650,7 @@ figure(FigID)
     plot(t,i_f,'LineWidth',1)    
     plot(t1,i1,'LineWidth',1)  
     xlabel('time [s]')
-    ylabel('current(filtered) [mA]')
+    ylabel('current (filtered) [mA]')
 % plot signal tension
 FigID=FigID+1;
 figure(FigID)
@@ -649,7 +670,7 @@ figure(FigID)
     plot(t,i_f,'LineWidth',1)    
     plot(t1,i1,'LineWidth',1)  
     xlabel('time [s]')
-    ylabel('current(filtered) [mA]')
+    ylabel('current (filtered) [mA]')
 % energy computation
 P= v.*i_f;% [mW]
 E=trapz(t,P);% [mJ]
@@ -690,6 +711,9 @@ i1=T1(:,2);% [mA]
 Ts = T(2,1) - T(1,1);
 Fs = 1/Ts;
 T=T(~isnan(T(:,2)),:);% eliminating NaN values(problem with filtering)
+% multiple measures and each measure start from zero,
+% when we concatenate the we have to recreate the time scale:
+T(:,1)=(0:1:length(T(:,1))-1)*Ts;
 % extraction of variables
 t=T(:,1);%[s]
 i=-T(:,2).*1000;%[mA]
@@ -784,6 +808,9 @@ i1=T1(:,2);% [mA]
 Ts = T(2,1) - T(1,1);
 Fs = 1/Ts;
 T=T(~isnan(T(:,2)),:);% eliminating NaN values(problem with filtering)
+% multiple measures and each measure start from zero,
+% when we concatenate the we have to recreate the time scale:
+T(:,1)=(0:1:length(T(:,1))-1)*Ts;
 % extraction of variables
 t=T(:,1);%[s]
 i=-T(:,2).*1000;%[mA]
@@ -1066,6 +1093,8 @@ FigID=FigID+1;
 figure(FigID)
     hold on    
     plot(t,puls,t(lk),puls(lk),'o','LineWidth',1)
+    xlabel('time [s]')
+    ylabel('voltage [v]')
 pressures=length(pk);% valore approssimativo ma moto vicino
 %% 0016
 % bmp

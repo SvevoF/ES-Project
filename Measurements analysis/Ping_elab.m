@@ -204,7 +204,7 @@ figure(FigID)
     plot(t_lra,I_mcu_int+I_lra_filt,'LineWidth',1)
     ylabel('Current (mA)')
     xlabel('Time (s)')
-    title('Signals')
+    title('Mesaured signals')
     legend('total','lra','mcu','lra+mcu')
     
 FigID=FigID+1;
@@ -220,6 +220,6 @@ FigID=FigID+1;
     X = categorical({'lra','mcu','mcu+lra','total mes'});
     Y = [E_lra_al;E_mcu_al; E_lra_al+E_mcu_al;E_tot_al];
     bar(X,Y,'stacked')
-    title('energy real')
+    title('energy consume')
     ylabel('E (mJ)')
 

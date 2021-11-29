@@ -45,7 +45,7 @@ sz=100;
 scatter(7:12,energy(:,1),sz,'o','filled')
 scatter(7:12,energy(:,2),sz,'o','filled')
 scatter(7:12,energy(:,3),sz,'o','filled')
-legend('bandwidth: 125','bandwidth: 250','bandwidth: 500','Location','southwest')
+legend('bandwidth: 125 kHz','bandwidth: 250 kHz','bandwidth: 500 kHz','Location','southwest')
 xlabel('Spreading Factor')
 ylabel('Energy [mJ]')
 title('Energy consumption in 1 second measure')
